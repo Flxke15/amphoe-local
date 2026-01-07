@@ -5,8 +5,8 @@
       <template v-slot:activator="{ props }">
         <v-list v-bind="props">
           <v-list-item prepend-avatar="https://cdn.vuetifyjs.com/images/john.jpg" >
-            <v-list-item-title>{{ userStore.user.name }}</v-list-item-title>
-            <v-list-item-subtitle>{{ userStore.user.email }}</v-list-item-subtitle>
+            <v-list-item-title>{{ profile.name }}</v-list-item-title>
+            <v-list-item-subtitle>{{ profile.role }}</v-list-item-subtitle>
           </v-list-item>
         </v-list>
       </template>
@@ -25,9 +25,11 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
 import { useUserStore } from '@/stores/user'
 import { alert } from '@/helpers/alert'
 
+const router = useRouter()
 const userStore = useUserStore()
 
 const systemName = process.env.APP_SYSTEM_NAME
@@ -45,6 +47,14 @@ const listMenu = [
     icon: 'mdi-logout'
   }
 ]
+
+const profile = computed(() => {
+  return {
+    name: userStore.user?.name || 'Guest',
+    email: userStore.user?.email || 'guest@example.com',
+    role: userStore.user?.role || 'viewer'
+  }
+})
 
 const onClickMenu = (item) => {
   console.log("🚀 ~ onClickMenu ~ item:", item)
@@ -73,6 +83,7 @@ const logout = () => {
   }).then((result) => {
     if (result.isConfirmed) {
       userStore.clearUser()
+      router.push({ name: 'Login' })
     }
   })
 }

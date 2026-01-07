@@ -7,7 +7,12 @@ export default [
     children: [
       {
         path: '',
-        redirect: '/Index'
+        redirect: '/Login'
+      },
+      {
+        path: 'Login',
+        name: 'Login',
+        component: () => import('@/pages/Login.vue'),
       },
       {
         path: 'Index',

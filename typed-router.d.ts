@@ -20,6 +20,7 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/About/Company': RouteRecordInfo<'/About/Company', '/About/Company', Record<never, never>, Record<never, never>>,
     '/About/Team': RouteRecordInfo<'/About/Team', '/About/Team', Record<never, never>, Record<never, never>>,
+    '/Blank': RouteRecordInfo<'/Blank', '/Blank', Record<never, never>, Record<never, never>>,
     '/Contact': RouteRecordInfo<'/Contact', '/Contact', Record<never, never>, Record<never, never>>,
     '/Home': RouteRecordInfo<'/Home', '/Home', Record<never, never>, Record<never, never>>,
     '/Index': RouteRecordInfo<'/Index', '/Index', Record<never, never>, Record<never, never>>,
@@ -43,6 +44,10 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/About/Team.vue': {
       routes: '/About/Team'
+      views: never
+    }
+    'src/pages/Blank.vue': {
+      routes: '/Blank'
       views: never
     }
     'src/pages/Contact.vue': {
