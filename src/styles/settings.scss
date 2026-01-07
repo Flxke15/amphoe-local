@@ -1,0 +1,36 @@
+// fonts
+[class*='text-'], [class^=swal2], body {
+  font-family: 'Kanit', sans-serif !important;
+}
+
+// SweetAlert2 Custom Styles
+.swal2-shown {
+  padding-right: 0 !important;
+}
+.swal2-container {
+  z-index: 20000 !important;
+}
+.sweetalert-custom {
+  .swal2-popup {
+    .swal2-confirm {
+      color: none !important;
+    }
+    .swal2-cancel {
+      color: none !important;
+    }
+  }
+  .swal2-styled.swal2-confirm {
+    color: #ffffff !important;
+    background-color: #311B92 !important;
+  }
+  .swal2-styled.swal2-cancel {
+    color: #311B92 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #311B92 !important;
+  }
+  // ปิด focus effect ของปุ่มยืนยัน
+  .swal2-confirm:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
