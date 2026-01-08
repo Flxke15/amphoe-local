@@ -96,9 +96,11 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useUserStore } from '@/stores/user'
+
+import { apiUsers } from '@/services'
 
 const router = useRouter()
 const userStore = useUserStore()
@@ -129,6 +131,12 @@ const onLogin = async () => {
   router.push({ name: 'Home' })
   loadingPage.value = false;
 }
+
+onMounted(async () => {
+  // Any initialization logic can go here
+  const res = await apiUsers.getListUsers()
+  console.log(res.data)
+})
 </script>
 
 <style scoped>
