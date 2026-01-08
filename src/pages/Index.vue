@@ -69,6 +69,16 @@
       </v-card-actions>
     </v-card>
   </v-dialog>
+  <v-card color="grey" class="pa-4 mt-4">
+    <v-card class="glassy-card pa-4 mt-4" color="blue">
+      <v-card-title class="text-h4 white--text">
+        Glassy Card
+      </v-card-title>
+      <v-card-text class="white--text">
+        This is a glassy card using backdrop-filter CSS property.
+      </v-card-text>
+    </v-card>
+  </v-card> 
 </template>
 
 <script setup>
@@ -115,3 +125,13 @@ const resetDialog = () => {
 }
 
 </script>
+
+<style scoped>
+.glassy-card {
+  background: rgba(138, 108, 217, 0.62) !important;
+  border-radius: 16px !important; 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(13.3px);
+ -webkit-backdrop-filter: blur(13.3px);
+}
+</style>

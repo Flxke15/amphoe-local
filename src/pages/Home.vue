@@ -1,4 +1,5 @@
 <template>
-  <p>Home</p>
-  <p>This is starter page</p>
+  <v-container fluid>
+    
+  </v-container>
 </template>

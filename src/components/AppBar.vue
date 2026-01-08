@@ -16,8 +16,9 @@
           :key="index"
           :value="index"
           :prepend-icon="item.icon"
+          @click="onClickMenu(item)"
         >
-          <v-list-item-title @click="onClickMenu(item)">{{ item.title }}</v-list-item-title>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
