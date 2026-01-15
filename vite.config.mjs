@@ -84,15 +84,15 @@ export default defineConfig({
       '.vue',
     ],
   },
-  base: '/web',
+  base: '/',
   server: {
     port: 8080,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-        secure: false,
-      },
-    },
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://localhost:3000',
+    //     changeOrigin: true,
+    //     secure: false,
+    //   },
+    // },
   },
 })
