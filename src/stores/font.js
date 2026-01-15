@@ -1,11 +1,18 @@
 // Utilities
 import { defineStore } from 'pinia'
 
+// const FONT_SIZES = {
+//   small: 14,
+//   medium: 16,
+//   large: 20,
+//   xlarge: 24,
+// }
+
 const FONT_SIZES = {
-  small: 14,
-  medium: 16,
-  large: 20,
-  xlarge: 24,
+  small: 16,
+  medium: 18,
+  large: 24,
+  xlarge: 28,
 }
 
 export const useFontStore = defineStore('font', {
