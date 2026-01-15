@@ -9,9 +9,14 @@ import { createVuetify } from 'vuetify'
 
 export default createVuetify({
   theme: {
-    defaultTheme: 'light',
+    defaultTheme: localStorage.getItem('theme') || 'light',
     themes: {
       light: {
+        colors: {
+          'app-color': process.env.APP_COLOR,
+        },
+      },
+      dark: {
         colors: {
           'app-color': process.env.APP_COLOR,
         },

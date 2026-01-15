@@ -1,6 +1,39 @@
+// CSS Variables for font size
+:root {
+  --app-font-size: 16px;
+}
+
 // fonts
 [class*='text-'], [class^=swal2], body {
   font-family: 'Kanit', sans-serif !important;
+}
+
+// Apply dynamic font size to body and all elements
+html {
+  font-size: var(--app-font-size) !important;
+}
+
+body {
+  font-size: var(--app-font-size) !important;
+}
+
+// Override Vuetify text classes to use variable
+.v-application {
+  font-size: var(--app-font-size) !important;
+  
+  p, span, div, label, input, textarea, select, button, a {
+    font-size: inherit;
+  }
+}
+
+// Dark theme - grayscale images
+.v-theme--dark {
+  img,
+  .v-img__img,
+  .v-card__image .v-img__img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
 }
 
 // SweetAlert2 Custom Styles
