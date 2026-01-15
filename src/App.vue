@@ -5,5 +5,12 @@
 </template>
 
 <script setup>
-  //
+import { onMounted } from 'vue'
+import { useFontStore } from '@/stores/font'
+
+const fontStore = useFontStore()
+
+onMounted(() => {
+  fontStore.initFontSize()
+})
 </script>
