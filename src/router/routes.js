@@ -6,7 +6,7 @@ export default [
     component: () => import('@/layouts/default.vue'),
     children: [
       {
-        path: '',
+        path: '/',
         redirect: '/Login'
       },
       {

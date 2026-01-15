@@ -134,8 +134,8 @@ const onLogin = async () => {
 
 onMounted(async () => {
   // Any initialization logic can go here
-  const res = await apiUsers.getListUsers()
-  console.log(res.data)
+  // const res = await apiUsers.getListUsers()
+  // console.log(res.data)
 })
 </script>
 
