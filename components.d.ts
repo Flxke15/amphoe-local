@@ -13,6 +13,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppBar: typeof import('./src/components/AppBar.vue')['default']
     AppFooter: typeof import('./src/components/AppFooter.vue')['default']
+    Autocomplete: typeof import('./src/components/Autocomplete.vue')['default']
+    FontSizeController: typeof import('./src/components/FontSizeController.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Loading: typeof import('./src/components/Loading.vue')['default']
     MapShow: typeof import('./src/components/MapShow.vue')['default']
